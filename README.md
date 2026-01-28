@@ -6,12 +6,6 @@
 
 > Uma aplicação web moderna e completa para gerenciamento de tarefas, com interface responsiva, dark mode e persistência de dados.
 
-## 🚀 Demo
-
-**[Ver Demo ao Vivo](https://seuusuario.github.io/todo-list-app/)** ← _adicione o link depois do deploy_
-
-![Screenshot do projeto](screenshot.png) ← _adicione uma screenshot depois_
-
 ---
 
 ## ✨ Funcionalidades
