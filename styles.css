@@ -1,0 +1,625 @@
+/* ========================================
+   VARIÁVEIS CSS (cores e espaçamentos)
+======================================== */
+:root {
+    /* Cores modo claro */
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
+    
+    /* Cores de destaque */
+    --color-primary: #667eea;
+    --color-secondary: #764ba2;
+    --color-success: #48bb78;
+    --color-danger: #f56565;
+    --color-warning: #ed8936;
+    
+    /* Prioridades */
+    --priority-baixa: #48bb78;
+    --priority-media: #ed8936;
+    --priority-alta: #f56565;
+    
+    /* Transições */
+    --transition: all 0.3s ease;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --bg-card: #2d3748;
+    --text-primary: #f7fafc;
+    --text-secondary: #cbd5e0;
+    --border-color: #4a5568;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
+   RESET E ESTILOS GLOBAIS
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: var(--transition);
+}
+
+/* ========================================
+   BOTÃO DE TEMA (Dark Mode)
+======================================== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.theme-toggle .sun-icon {
+    display: block;
+}
+
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .sun-icon {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .moon-icon {
+    display: block;
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL
+======================================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.6s ease;
+}
+
+.header h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   SEÇÃO DE ADICIONAR TAREFA
+======================================== */
+.add-task-section {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.task-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.task-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.task-select {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.task-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.btn-add {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ========================================
+   FILTROS E BUSCA
+======================================== */
+.filters-section {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.7s ease;
+}
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border-color: transparent;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-clear {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+    background: var(--color-danger);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-clear:hover {
+    background: #e53e3e;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   ESTATÍSTICAS
+======================================== */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   LISTA DE TAREFAS
+======================================== */
+.tasks-container {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+    animation: fadeInUp 0.9s ease;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    background: var(--bg-primary);
+    padding: 18px;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+    animation: slideIn 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+
+/* Cores de borda por prioridade */
+.task-item.priority-baixa {
+    border-left-color: var(--priority-baixa);
+}
+
+.task-item.priority-media {
+    border-left-color: var(--priority-media);
+}
+
+.task-item.priority-alta {
+    border-left-color: var(--priority-alta);
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.task-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+}
+
+.task-category,
+.task-priority,
+.task-date {
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.btn-edit {
+    background: var(--color-warning);
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #dd6b20;
+    transform: scale(1.05);
+}
+
+.btn-delete {
+    background: var(--color-danger);
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #e53e3e;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   ESTADO VAZIO (sem tarefas)
+======================================== */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state.hidden {
+    display: none;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE (Mobile)
+======================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        padding-top: 30px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .task-options {
+        flex-direction: column;
+    }
+
+    .task-select,
+    .btn-add {
+        width: 100%;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        right: 15px;
+    }
+}

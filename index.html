@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Botão de Dark Mode -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>📝 Lista de Tarefas</h1>
+        <p class="subtitle">Organize suas tarefas com eficiência</p>
+      </header>
+
+      <!-- Formulário de adicionar tarefa -->
+      <div class="add-task-section">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="Digite sua tarefa..."
+          maxlength="100"
+        />
+
+        <div class="task-options">
+          <select id="taskCategory" class="task-select">
+            <option value="pessoal">🏠 Pessoal</option>
+            <option value="trabalho">💼 Trabalho</option>
+            <option value="estudos">📚 Estudos</option>
+            <option value="saude">💪 Saúde</option>
+            <option value="outros">📌 Outros</option>
+          </select>
+
+          <select id="taskPriority" class="task-select">
+            <option value="baixa">🟢 Baixa</option>
+            <option value="media">🟡 Média</option>
+            <option value="alta">🔴 Alta</option>
+          </select>
+
+          <button id="addTaskBtn" class="btn-add">
+            <span class="btn-icon">+</span>
+            Adicionar
+          </button>
+        </div>
+      </div>
+
+      <!-- Filtros e Busca -->
+      <div class="filters-section">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="🔍 Buscar tarefas..."
+          />
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="todas">
+            Todas <span class="badge" id="badgeTodas">0</span>
+          </button>
+          <button class="filter-btn" data-filter="ativas">
+            Ativas <span class="badge" id="badgeAtivas">0</span>
+          </button>
+          <button class="filter-btn" data-filter="concluidas">
+            Concluídas <span class="badge" id="badgeConcluidas">0</span>
+          </button>
+        </div>
+
+        <button class="btn-clear" id="clearCompletedBtn">
+          🗑️ Limpar Concluídas
+        </button>
+      </div>
+
+      <!-- Estatísticas -->
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="stat-number" id="statTotal">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statPendentes">0</div>
+          <div class="stat-label">Pendentes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statConcluidas">0</div>
+          <div class="stat-label">Concluídas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statProgresso">0%</div>
+          <div class="stat-label">Progresso</div>
+        </div>
+      </div>
+
+      <!-- Lista de Tarefas -->
+      <div class="tasks-container">
+        <div id="tasksList" class="tasks-list">
+          <!-- Tarefas serão inseridas aqui pelo JavaScript -->
+        </div>
+
+        <!-- Mensagem quando não há tarefas -->
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">📋</div>
+          <h3>Nenhuma tarefa encontrada</h3>
+          <p>Adicione uma nova tarefa para começar!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Desenvolvido por <strong>Diego Rapichan</strong> 💻</p>
+      <p>
+        <a href="https://github.com/DiegoRapichan" target="_blank">GitHub</a> |
+        <a href="www.linkedin.com/in/diego-rapichan" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

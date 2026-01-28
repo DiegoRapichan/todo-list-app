@@ -1,0 +1,25 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Node modules (caso adicione backend depois)
+node_modules/
+package-lock.json
+
+# Build (caso use bundlers depois)
+dist/
+build/
+
+# Ambiente
+.env
+.env.local
