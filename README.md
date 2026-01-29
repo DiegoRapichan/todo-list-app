@@ -166,7 +166,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **Diego Rapichan**
 
 - GitHub: [@DiegoRapichan](https://github.com/DiegoRapichan)
-- LinkedIn: [Seu LinkedIn](www.linkedin.com/in/diego-rapichan)
+- LinkedIn: [www.linkedin.com/in/diego-rapichan](www.linkedin.com/in/diego-rapichan)
 - Email: direrapichan@gmail.com
 
 ---
