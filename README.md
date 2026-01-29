@@ -105,24 +105,6 @@ Este projeto demonstra conhecimento em:
 - ✅ **Responsividade** - media queries e layouts flexíveis
 - ✅ **UX/UI** - experiência do usuário e design intuitivo
 
----
-
-
-## 📱 Capturas de Tela
-
-### Desktop - Modo Claro
-
-![Desktop Light](docs/desktop-light.png)
-
-### Desktop - Modo Escuro
-
-![Desktop Dark](docs/desktop-dark.png)
-
-### Mobile
-
-![Mobile](docs/mobile.png)
-
-_Adicione screenshots depois de rodar o projeto_
 
 ---
 
