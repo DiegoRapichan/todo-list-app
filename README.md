@@ -107,29 +107,6 @@ Este projeto demonstra conhecimento em:
 
 ---
 
-## 🚀 Deploy (GitHub Pages)
-
-### Passo a Passo para Publicar:
-
-1. **Faça commit de todos os arquivos:**
-
-```bash
-git add .
-git commit -m "Projeto completo"
-git push origin main
-```
-
-2. **Ative o GitHub Pages:**
-   - Vá em **Settings** do repositório
-   - Clique em **Pages** no menu lateral
-   - Em **Source**, selecione **main** branch
-   - Clique em **Save**
-   - Aguarde 1-2 minutos
-
-3. **Acesse sua aplicação:**
-   - URL: `https://DiegoRapichan.github.io/todo-list-app/`
-
----
 
 ## 📱 Capturas de Tela
 
