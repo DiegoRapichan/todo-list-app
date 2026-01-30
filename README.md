@@ -6,12 +6,6 @@
 
 > Uma aplicação web moderna e completa para gerenciamento de tarefas, com interface responsiva, dark mode e persistência de dados.
 
-## 🚀 Demo
-
-**[Ver Demo ao Vivo](https://seuusuario.github.io/todo-list-app/)** ← _adicione o link depois do deploy_
-
-![Screenshot do projeto](screenshot.png) ← _adicione uma screenshot depois_
-
 ---
 
 ## ✨ Funcionalidades
@@ -111,47 +105,6 @@ Este projeto demonstra conhecimento em:
 - ✅ **Responsividade** - media queries e layouts flexíveis
 - ✅ **UX/UI** - experiência do usuário e design intuitivo
 
----
-
-## 🚀 Deploy (GitHub Pages)
-
-### Passo a Passo para Publicar:
-
-1. **Faça commit de todos os arquivos:**
-
-```bash
-git add .
-git commit -m "Projeto completo"
-git push origin main
-```
-
-2. **Ative o GitHub Pages:**
-   - Vá em **Settings** do repositório
-   - Clique em **Pages** no menu lateral
-   - Em **Source**, selecione **main** branch
-   - Clique em **Save**
-   - Aguarde 1-2 minutos
-
-3. **Acesse sua aplicação:**
-   - URL: `https://DiegoRapichan.github.io/todo-list-app/`
-
----
-
-## 📱 Capturas de Tela
-
-### Desktop - Modo Claro
-
-![Desktop Light](docs/desktop-light.png)
-
-### Desktop - Modo Escuro
-
-![Desktop Dark](docs/desktop-dark.png)
-
-### Mobile
-
-![Mobile](docs/mobile.png)
-
-_Adicione screenshots depois de rodar o projeto_
 
 ---
 
@@ -195,8 +148,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **Diego Rapichan**
 
 - GitHub: [@DiegoRapichan](https://github.com/DiegoRapichan)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
-- Email: seu.email@example.com
+- LinkedIn: [www.linkedin.com/in/diego-rapichan](www.linkedin.com/in/diego-rapichan)
+- Email: direrapichan@gmail.com
 
 ---
 
