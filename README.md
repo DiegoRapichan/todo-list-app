@@ -54,6 +54,18 @@
 | **Responsive Design** | Layout adaptável                     |
 
 ---
+## 📸 Screenshots
+
+### Interface Responsiva
+![Responsivo](docs/screenshots/responsivo.png)
+
+### Modo Claro
+![Modo Claro](docs/screenshots/modo-claro.png)
+
+### Modo Escuro
+![Modo Escuro](docs/screenshots/modo-escuro.png)
+
+
 
 ## 📦 Como Usar
 
@@ -165,4 +177,4 @@ Se este projeto te ajudou, considere dar uma ⭐ no repositório!
 
 ---
 
-**Desenvolvido com 💜 por Diego Rapichan**
+**Desenvolvido por Diego Rapichan**
